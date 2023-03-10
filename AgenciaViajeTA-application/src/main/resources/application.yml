@@ -1,0 +1,55 @@
+spring:
+  profiles: local
+  datasource:
+    url: jdbc:oracle:thin:@database-1.c4qbfoflnenh.us-east-2.rds.amazonaws.com:1521:academia
+    username: agenciata
+    password: Capgemini2023#
+    driver-class-name: oracle.jdbc.OracleDriver
+    tomcat:
+       testOnBorrow: true 
+       testOnConnect: true 
+       validationQuery: SELECT 1
+  application:
+    name: AgenciaViajeTA
+  jpa:
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate:
+        dialect:  org.hibernate.dialect.Oracle12cDialect
+        format_sql: true
+    show-sql: true
+
+  servlet:
+    multipart:
+      max-file-size: 1024MB
+      max-request-size: 1024MB
+management:
+  endpoint:
+    health:
+      show-details: always
+server:
+  port: 8080
+  jpa:
+    generate-ddl: false
+  undertow:
+    ioThreads: 15
+    workerThreads: 150
+  compression:
+    enabled: true
+    mimeTypes: text/xml, application/json
+    minResponseSize: 4096
+  servlet:
+    context-path: /AgenciaViajeTA
+opentracing:
+  jaeger:
+    enable-b3-propagation: true
+
+logging:
+  level:
+    org:
+      hibernate:
+        type: trace
+    io:
+      jaegertracing:
+        reporters: WARN     

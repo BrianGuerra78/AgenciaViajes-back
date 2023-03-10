@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-Application<AgenciaViajeTA-application>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "mx.com.basantader.AgenciaViajeTA.Application",
+            "projectName": "AgenciaViajeTA-application",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

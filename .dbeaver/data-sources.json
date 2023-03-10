@@ -1,0 +1,35 @@
+{
+	"folders": {},
+	"connections": {
+		"oracle_thin-185a2a3f960-5d997d64dcc8e099": {
+			"provider": "oracle",
+			"driver": "oracle_thin",
+			"name": "academia",
+			"save-password": true,
+			"configuration": {
+				"host": "database-1.c4qbfoflnenh.us-east-2.rds.amazonaws.com",
+				"port": "1521",
+				"database": "academia",
+				"url": "jdbc:oracle:thin:@//database-1.c4qbfoflnenh.us-east-2.rds.amazonaws.com:1521/academia",
+				"configurationType": "MANUAL",
+				"type": "dev",
+				"provider-properties": {
+					"@dbeaver-connection-type@": "BASIC",
+					"@dbeaver-sid-service@": "SERVICE"
+				},
+				"auth-model": "oracle_native"
+			}
+		}
+	},
+	"connection-types": {
+		"dev": {
+			"name": "Development",
+			"color": "255,255,255",
+			"description": "Regular development database",
+			"auto-commit": true,
+			"confirm-execute": false,
+			"confirm-data-change": false,
+			"auto-close-transactions": false
+		}
+	}
+}
