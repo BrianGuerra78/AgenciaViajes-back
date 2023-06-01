@@ -1,9 +1,9 @@
 spring:
   profiles: local
   datasource:
-    url: jdbc:oracle:thin:@database-1.c4qbfoflnenh.us-east-2.rds.amazonaws.com:1521:academia
-    username: agenciata
-    password: Capgemini2023#
+    url: jdbc:oracle:*******
+    username: **********
+    password: **********
     driver-class-name: oracle.jdbc.OracleDriver
     tomcat:
        testOnBorrow: true 
